@@ -27,20 +27,12 @@ app.listen(process.env.PORT || 3000,() => {
     console.log(`http://localhost:${process.env.PORT}`)
 })
 
-app.get("/", async (req, res) => {
-    // Send initial "Loading..." response
-    res.write({
-        message: "Loading... System check ho raha hai, thodi der ruk, bhai!"
-    });
+app.get("/", (req,res) => {
+    res.send({
+        message: "https://pbs.twimg.com/media/ElZw6OdWkAEP3lv.jpg"
+    })
+})
 
-    // Simulate delay for dramatic effect (3 seconds)
-    await new Promise(resolve => setTimeout(resolve, 3000));
-
-    // Send the "hacked" prank with Meri Sakhi vibe
-    res.json({
-        message: "Haha, tera system toh hack ho gaya! 😜 Par chill, Meri Sakhi ne tujhe safe rakha hai!"
-    });
-});
 // All Controllers import
 import { googleLogin } from "./controllers/user.controller.js";
 import { addCaller, deleteCaller, getCaller } from "./controllers/call-log.controller.js";

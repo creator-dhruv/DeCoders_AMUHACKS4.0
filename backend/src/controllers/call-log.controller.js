@@ -64,9 +64,9 @@ const deleteCaller = async (req,res) => {
 
 
 const getCaller = async (req,res) => {
-    const user = req.user
+    const userID = req.user._id
 
-    const callerDetail = await Caller.find(user._id)
+    const callerDetail = await Caller.find({userID})
 
     return res.json({
         message: "Data fetched successfully.",

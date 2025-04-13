@@ -29,7 +29,7 @@ app.listen(process.env.PORT || 3000,() => {
 
 app.get("/", (req,res) => {
     res.send({
-        message: "https://pbs.twimg.com/media/ElZw6OdWkAEP3lv.jpg"
+        message: "i am connected"
     })
 })
 

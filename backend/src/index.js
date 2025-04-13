@@ -29,7 +29,7 @@ app.listen(process.env.PORT || 3000,() => {
 
 app.get("/", (req,res) => {
     res.send({
-        message: "I am connected."
+        message: "i am connected"
     })
 })
 
